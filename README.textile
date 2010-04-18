@@ -1,0 +1,28 @@
+﻿Enables you to list all site pages using EE tags.
+		
+h2.	Usage example:
+<code>
+	&lt;ul&gt;
+		{exp:pageslist}
+			&lt;li&gt;&lt;a href='{path={pageslist_page_uri}}'>{pageslist_page_title}&lt;/a&gt;&lt;/li&gt;
+		{/exp:pageslist}
+	&lt;/ul&gt;
+</code>		
+		
+h2. Optional parameters:
+		
+_selected_add_ - add this if the the current uri matches the page uri (nice for highlighting the current menu item for instance)
+		
+_conditional_field_ and _conditional_field_value_
+				
+These two parameters will restrict the pages to those who have the conditional field with a specific value. For instance,
+in the usage example below there is a custom field called "include_in_menu" which is a select dropdown with 
+values "Yes" and "No". This pageslist tag will only list those pages who have selected include_in_menu "Yes" 
+
+You can use these variables to select pages by any kind of custom field.
+
+<code>				
+	{exp:pageslist conditional_field='include_in_menu' conditional_field_value='Yes'}
+			&lt;li&gt;&lt;a href="{path={pageslist_page_uri}}"&gt;{pageslist_page_title}&lt;/a&gt;&lt;/li&gt;
+	{/exp:pageslist}	    					
+</code>
