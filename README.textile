@@ -1,12 +1,10 @@
 ﻿Enables you to list all site pages using EE tags.
 		
 h2.	Usage example:
-<code>
-	
+<code>	
 		{exp:pageslist}
 			link={path={pageslist_page_uri}} title={pageslist_page_title}
 		{/exp:pageslist}
-
 </code>		
 		
 h2. Optional parameters:
