@@ -2,11 +2,11 @@
 		
 h2.	Usage example:
 <code>
-	&lt;ul&gt;
+	
 		{exp:pageslist}
-			&lt;li&gt;&lt;a href='{path={pageslist_page_uri}}'>{pageslist_page_title}&lt;/a&gt;&lt;/li&gt;
+			link={path={pageslist_page_uri}} title={pageslist_page_title}
 		{/exp:pageslist}
-	&lt;/ul&gt;
+
 </code>		
 		
 h2. Optional parameters:
@@ -23,6 +23,6 @@ You can use these variables to select pages by any kind of custom field.
 
 <code>				
 	{exp:pageslist conditional_field='include_in_menu' conditional_field_value='Yes'}
-			&lt;li&gt;&lt;a href="{path={pageslist_page_uri}}"&gt;{pageslist_page_title}&lt;/a&gt;&lt;/li&gt;
+			link={path={pageslist_page_uri}} title={pageslist_page_title}
 	{/exp:pageslist}	    					
 </code>
