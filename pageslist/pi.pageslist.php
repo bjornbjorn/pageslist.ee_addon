@@ -47,7 +47,9 @@ class Pageslist
 			}
 		}
 		
-		$site_pages = $this->EE->config->item('site_pages');
+		$all_site_pages = $this->EE->config->item('site_pages');		
+		$site_pages = $all_site_pages[$this->EE->config->item('site_id')];
+								
 		$entry_ids = '';
 
 		if(isset($site_pages['uris']) && count($site_pages['uris']) > 0)	// if we have any pages
