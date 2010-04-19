@@ -47,7 +47,13 @@ class Pageslist
 			}
 		}
 		
-		$all_site_pages = $this->EE->config->item('site_pages');		
+		$all_site_pages = $this->EE->config->item('site_pages');
+
+		if(!isset($all_site_pages[$this->EE->config->item('site_id')]))
+		{
+			return;			
+		}		
+		
 		$site_pages = $all_site_pages[$this->EE->config->item('site_id')];
 								
 		$entry_ids = '';
